@@ -1,0 +1,21 @@
+.about_container {
+  @apply max-w-[90%] sm:max-w-[80%] mx-auto pt-36;
+}
+.about_headline {
+  @apply text-4xl sm:text-5xl mb-14 font-bold 
+    animate-fade-left animate-delay-500 animate-ease-in-out;
+}
+.about_data {
+  @apply grid grid-cols-2 gap-5 items-center pb-5;
+}
+.about_profile {
+  @apply col-span-2 sm:col-span-1 animate-fade-up animate-delay-500 animate-ease-in-out;
+}
+/* Profile */
+.profile_image {
+  @apply rounded-full;
+}
+/* Summary */
+.about_summary {
+  @apply col-span-2 sm:col-span-1 animate-fade-up animate-delay-500 animate-ease-in-out;
+}
