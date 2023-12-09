@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.darkMode {
+  @apply dark:bg-[#013240];
+}
+.lightMode {
+  @apply bg-[#EFF0F2];
+}
+
 body {
-  @apply bg-[#FEF2F6] 
-  dark:bg-slate-900;
+  @apply lightMode darkMode;
 }
 
 main {
-  @apply bg-[#FEF2F6] 
-  dark:bg-slate-900;
+  @apply lightMode darkMode;
 }
 
 /****** Home Page ******/
@@ -42,15 +47,24 @@ main {
 /* Projects */
 .projects_container {
   @apply pb-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-5
-  animate-fade-up animate-delay-500 animate-ease-in-out;
+  animate-fade-up animate-delay-1000 animate-ease-in-out;
 }
 .project {
   @apply relative flex items-center justify-center 
     hover:transform hover:-translate-y-3 hover:odd:transition-transform 
     hover:duration-300 hover:ease-in-out;
 }
+.project_gif {
+  @apply hidden;
+}
+.project:hover .project_img {
+  @apply hidden;
+}
+.project:hover .project_gif {
+  @apply flex;
+}
 .project:hover .project_title {
-  @apply opacity-100;
+  @apply opacity-80;
 }
 .project:hover h1 {
   @apply animate-fade-up animate-delay-100 animate-ease-in-out;

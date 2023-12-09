@@ -11,9 +11,9 @@ export default async function Logo() {
         <Image
           src={logo}
           alt="Ahmad-Elmesery-logo"
-          width={30}
-          height={30}
-          className="rounded-full"
+          width={55}
+          height={55}
+          // className="rounded-full"
         />
       </Link>
     </>

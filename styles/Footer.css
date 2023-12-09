@@ -1,4 +1,5 @@
 .footer {
+  @layer lightMode darkMode;
   @apply bottom-0 w-full py-12 text-center 
-  bg-red-200 dark:bg-[#111827] dark:border-t dark:border-slate-700;
+   dark:border-t dark:border-slate-700;
 }

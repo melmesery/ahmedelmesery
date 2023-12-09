@@ -20,6 +20,19 @@ const project = {
             type: "string",
         },
         {
+            name: "gif",
+            title: "Gif",
+            type: "image",
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: "alt",
+                    title: "Alt",
+                    type: "string",
+                },
+            ],
+        },
+        {
             name: "mainImage",
             title: "Main Image",
             type: "image",

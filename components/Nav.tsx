@@ -20,7 +20,8 @@ export default function Nav() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="absolute nav_container bg-[#FEF2F6]"
+      // className="absolute nav_container bg-[#FEF2F6]"
+      className="absolute nav_container bg-[#EFF0F2]"
     >
       <NavbarContent className="">
         <NavbarMenuToggle

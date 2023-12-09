@@ -1,5 +1,4 @@
 import ReelDetails from "@/components/ReelDetails.tsx";
-import Video from "@/components/Video.tsx";
 import { getReel } from "@/sanity/sanity-utils.ts";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
@@ -9,7 +8,7 @@ export const revalidate = 10;
 
 export default async function Work() {
   const reel = await getReel();
-  const { content } = reel;
+  const { content, url } = reel;
   return (
     <div className="reel_container">
       <section className="reel_video">
@@ -17,7 +16,14 @@ export default async function Work() {
         <h1 className="reel_headline">
           Motion Reel {new Date().getFullYear()}
         </h1>
-        <Video />
+        <div className="reel">
+          <iframe
+            className="w-full aspect-video"
+            title="vimeo-player"
+            src={url}
+            allowFullScreen
+          ></iframe>
+        </div>
         <div className="reel_content">
           <PortableText value={content} />
         </div>

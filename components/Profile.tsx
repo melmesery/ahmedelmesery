@@ -14,6 +14,7 @@ export default async function Profile() {
         className="profile_image"
         width={520}
         height={520}
+        quality={100}
       />
     </>
   );

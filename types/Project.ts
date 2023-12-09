@@ -5,11 +5,11 @@ export type Project = {
   createdAt: Date;
   name: string;
   slug: string;
+  gif: string;
   mainImage: string;
-  bigImage: string;
   meduimImages: string[];
   smallImages: string[];
   url: string;
-  content?: PortableTextBlock[];
-  team?: string[]
+  content: PortableTextBlock[];
+  team: string[]
 }
