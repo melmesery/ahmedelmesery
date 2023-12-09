@@ -1,11 +1,12 @@
 import Footer from "@/components/Footer.tsx";
 import Nav from "@/components/Nav.tsx";
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "../globals.css";
 import Providers from "./providers.tsx";
+import { ProfileProvider } from "@/context/ProfileContext.tsx";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ahmad Elmesery - Motion Designer",
@@ -19,11 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Providers>
-          <Nav />
-          <main>{children}</main>
-          <Footer />
+          <ProfileProvider>
+            <Nav />
+            <main>{children}</main>
+            <Footer />
+          </ProfileProvider>
         </Providers>
       </body>
     </html>
