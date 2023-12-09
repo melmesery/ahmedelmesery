@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import useUserProfile from "../hooks/useProfile.tsx";
+import useProfile from "../hooks/useProfile.tsx";
 
 export default function Logo() {
   const [logoData, setLogoData] = useState<any>({ logo: null });
 
   useEffect(() => {
-    useUserProfile().then((data) => {
+    useProfile().then((data) => {
       setLogoData(data);
     });
   }, []);
