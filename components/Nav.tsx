@@ -14,14 +14,14 @@ import { useState } from "react";
 import "../styles/Nav.css";
 import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
-
+ 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+ 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      // className="absolute nav_container bg-[#FEF2F6]"
-      className="absolute nav_container bg-[#EFF0F2]"
+      className="absolute nav_container bg-[#FEF2F6]" 
     >
       <NavbarContent className="">
         <NavbarMenuToggle
@@ -57,7 +57,7 @@ export default function Nav() {
             <Link href="/">Work</Link>
           </NavbarMenuItem>
           <NavbarMenuItem>
-            <Link href="/reel">Reel</Link>
+            <Link href="/work/ahmad-elmesery-reel">Reel</Link>
           </NavbarMenuItem>
           <NavbarMenuItem>
             <Link href="/about">About</Link>
