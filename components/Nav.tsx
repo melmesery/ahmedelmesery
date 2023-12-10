@@ -51,15 +51,17 @@ export default function App() {
       </NavbarContent>
 
       <NavbarMenu className="nav_mobile_links">
-        <NavbarMenuItem>
-          <Link href="/">Work</Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/work/ahmad-elmesery-reel">Reel</Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link href="/about">About</Link>
-        </NavbarMenuItem>
+        <div className="min-h-[50vh] grid items-center justify-center text-center">
+          <NavbarMenuItem>
+            <Link href="/">Work</Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link href="/work/ahmad-elmesery-reel">Reel</Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link href="/about">About</Link>
+          </NavbarMenuItem>
+        </div>
       </NavbarMenu>
     </Navbar>
   );

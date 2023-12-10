@@ -21,7 +21,7 @@
 }
 /* Details Section */
 .reel_details {
-  @apply bg-[#F3E3E9]   dark:bg-[#013240];
+  @apply dark:bg-[#013240];
 }
 .details {
   @apply max-w-[90%] sm:max-w-[80%] mx-auto py-10;
