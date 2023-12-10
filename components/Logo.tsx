@@ -17,8 +17,7 @@ export default function Logo() {
             alt="Ahmad-Elmesery-logo"
             width={55}
             height={55}
-            // className="rounded-full"
-          />
+           />
         </Link>
       )}
     </>

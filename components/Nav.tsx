@@ -11,7 +11,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import Logo from "./Logo.tsx";
+// import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
 
@@ -26,7 +26,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="lg:-ml-28">
-          <Logo />
+          {/* <Logo /> */}
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">

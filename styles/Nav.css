@@ -1,5 +1,5 @@
 .nav_container {
-  @apply dark:bg-[#013240]
+  @apply py-2 dark:bg-[#013240]
   dark:border-b dark:border-slate-700;
 }
 /* .nav_mobile_toggler {
@@ -12,7 +12,8 @@
   @apply hidden sm:flex gap-8;
 }
 .nav_links a {
-  @apply text-[#54BA6E] dark:text-[#FFE9B7] hover:font-extrabold hover:text-[#DD4C39] hover:italic dark:hover:text-[#54BA6E];
+  @apply lg:w-[50px] text-[#54BA6E] dark:text-[#FFE9B7] hover:font-extrabold hover:text-[#DD4C39] 
+  hover:italic dark:hover:text-[#54BA6E];
 }
 /* .nav_mobile_links {
   @apply bg-blue-200;
