@@ -11,9 +11,11 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import Logo from "./Logo.tsx";
+// import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
+import Image from "next/image";
+import logo from "../public/assets/logo.png";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +31,15 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="lg:-ml-28">
-          <Logo />
+          <Link href="/" className="cursor-pointer">
+            <Image
+              src={logo}
+              alt="Ahmad-Elmesery-logo"
+              width={55}
+              height={55}
+            />
+          </Link>
+          {/* <Logo /> */}
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">
