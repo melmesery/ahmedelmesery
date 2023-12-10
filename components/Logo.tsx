@@ -3,17 +3,44 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getProfile } from "../sanity/sanity-utils.ts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Logo() {
+// export default function Logo() {
+//   const [logo, setLogo] = useState("");
+
+//   const fetchProfile = async () => {
+//     const { logo }: any = await getProfile();
+//     setLogo(logo);
+//     return;
+//   };
+//   fetchProfile();
+
+//   return (
+//     <>
+//       {logo && (
+//         <Link href="/" className="cursor-pointer">
+//           <Image src={logo} alt="Ahmad-Elmesery-logo" width={55} height={55} />
+//         </Link>
+//       )}
+//     </>
+//   );
+// }
+
+const Logo = () => {
   const [logo, setLogo] = useState("");
 
   const fetchProfile = async () => {
-    const { logo }: any = await getProfile();
-    setLogo(logo);
-    return;
+    try {
+      const { logo: fetchedLogo } = await getProfile();
+      setLogo(fetchedLogo);
+    } catch (error) {
+      console.log(error);
+    }
   };
-  fetchProfile();
+
+  useEffect(() => {
+    fetchProfile();
+  }, []); 
 
   return (
     <>
@@ -24,4 +51,6 @@ export default function Logo() {
       )}
     </>
   );
-}
+};
+
+export default Logo;
