@@ -1,35 +1,42 @@
-"use client";
 
-import { useState } from "react";
+
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
+  Link, 
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
+import Logo from "./Logo.tsx";
 import "../styles/Nav.css";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <Navbar
-      onMenuOpenChange={setIsMenuOpen}
+      disableAnimation
+      isBordered
       className="nav_container bg-transparent"
     >
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand className="lg:-ml-28"></NavbarBrand>
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle />
+        <NavbarBrand>
+          <Logo />
+        </NavbarBrand>
       </NavbarContent>
+
       <NavbarContent className="sm:hidden" justify="end">
         <ThemeSwitcher />
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4 lg:-ml-28" justify="start">
+        <NavbarBrand>
+          <Logo />
+        </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent
