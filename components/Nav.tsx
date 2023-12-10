@@ -11,7 +11,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-// import Logo from "./Logo.tsx";
+import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
 
@@ -19,21 +19,27 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="nav_container bg-transparent">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="nav_container bg-transparent"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand className="lg:-ml-28">
-          {/* <Logo /> */}
+          <Logo />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">
         <ThemeSwitcher />
       </NavbarContent>
 
-      <NavbarContent className="nav_links hidden sm:flex gap-4 lg:-mr-28" justify="end">
+      <NavbarContent
+        className="nav_links hidden sm:flex gap-4 lg:-mr-28"
+        justify="end"
+      >
         <NavbarItem>
           <Link href="/">Work</Link>
         </NavbarItem>

@@ -7,8 +7,7 @@ import { ProfileContext } from "../context/ProfileContext.tsx";
 
 export default function Logo() {
   const profile = useContext(ProfileContext);
-
-  return (
+   return (
     <>
       {profile?.logo && (
         <Link href="/" className="cursor-pointer">
@@ -17,7 +16,7 @@ export default function Logo() {
             alt="Ahmad-Elmesery-logo"
             width={55}
             height={55}
-           />
+          />
         </Link>
       )}
     </>

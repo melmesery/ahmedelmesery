@@ -4,8 +4,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
 import Providers from "./providers.tsx";
-import { ProfileProvider } from "@/context/ProfileContext.tsx";
-
+ 
 const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,12 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Providers>
-          <ProfileProvider>
             <Nav />
             <main>{children}</main>
             <Footer />
-          </ProfileProvider>
-        </Providers>
+         </Providers>
       </body>
     </html>
   );

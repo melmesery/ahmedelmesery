@@ -2,7 +2,7 @@ import Profile from "@/components/Profile.tsx";
 import Summary from "@/components/Summary.tsx";
 import "@/styles/About.css";
 
-export default async function About() {
+export default function About() {
   return (
     <div className="about_container">
       <h1 className="about_headline">About</h1>
