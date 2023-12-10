@@ -23,7 +23,7 @@ main {
 }
 /* Hero */
 .hero_container {
-  @apply pt-40 pb-2 sm:pb-5 animate-fade-up animate-delay-500 animate-ease-in-out;
+  @apply pt-10 pb-2 sm:pb-5 animate-fade-up animate-delay-500 animate-ease-in-out;
 }
 .hero {
   @apply relative flex items-center justify-center 

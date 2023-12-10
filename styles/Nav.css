@@ -1,21 +1,19 @@
 .nav_container {
-  /* @layer lightMode darkMode; */
-  @apply py-5 
-  dark:bg-[#013240]
+  @apply dark:bg-[#013240]
   dark:border-b dark:border-slate-700;
 }
-.nav_mobile_toggler {
+/* .nav_mobile_toggler {
   @apply sm:hidden;
-}
+} */
 .nav_logo {
   @apply font-bold text-inherit cursor-pointer;
 }
 .nav_links {
-  @apply hidden sm:flex gap-8 text-[#54BA6E] dark:text-[#FFE9B7];
+  @apply hidden sm:flex gap-8;
 }
 .nav_links a {
-  @apply hover:font-extrabold hover:text-[#DD4C39] hover:italic dark:hover:text-[#54BA6E]
+  @apply text-[#54BA6E] dark:text-[#FFE9B7] hover:font-extrabold hover:text-[#DD4C39] hover:italic dark:hover:text-[#54BA6E];
 }
-.nav_mobile_links {
+/* .nav_mobile_links {
   @apply bg-blue-200;
-}
+} */

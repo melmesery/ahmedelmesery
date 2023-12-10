@@ -1,5 +1,5 @@
 .about_container {
-  @apply max-w-[90%] sm:max-w-[80%] mx-auto pt-36;
+  @apply max-w-[90%] sm:max-w-[80%] mx-auto pt-5;
 }
 .about_headline {
   @apply text-4xl sm:text-5xl mb-14 font-bold 

@@ -1,34 +1,31 @@
 "use client";
 
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  Link,
+  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  NavbarMenuToggle,
-} from "@nextui-org/react"; 
-import Link from "next/link";
-import { useState } from "react";
-import "../styles/Nav.css";
+} from "@nextui-org/react";
 import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
- 
-export default function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+import "../styles/Nav.css";
+
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   return (
-    <Navbar
-      onMenuOpenChange={setIsMenuOpen}
-      className="absolute nav_container bg-[#FEF2F6]" 
-    >
-      <NavbarContent className="">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="nav_container bg-transparent">
+      <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+        <NavbarBrand className="lg:-ml-28">
           <Logo />
         </NavbarBrand>
       </NavbarContent>
@@ -36,7 +33,7 @@ export default function Nav() {
         <ThemeSwitcher />
       </NavbarContent>
 
-      <NavbarContent className="nav_links hidden sm:flex gap-8" justify="end">
+      <NavbarContent className="nav_links hidden sm:flex gap-4 lg:-mr-28" justify="end">
         <NavbarItem>
           <Link href="/">Work</Link>
         </NavbarItem>
@@ -52,17 +49,15 @@ export default function Nav() {
       </NavbarContent>
 
       <NavbarMenu className="nav_mobile_links">
-        <div className="h-[70%] grid items-center text-center">
-          <NavbarMenuItem>
-            <Link href="/">Work</Link>
-          </NavbarMenuItem>
-          <NavbarMenuItem>
-            <Link href="/work/ahmad-elmesery-reel">Reel</Link>
-          </NavbarMenuItem>
-          <NavbarMenuItem>
-            <Link href="/about">About</Link>
-          </NavbarMenuItem>
-        </div>
+        <NavbarMenuItem>
+          <Link href="/">Work</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/work/ahmad-elmesery-reel">Reel</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link href="/about">About</Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
