@@ -14,25 +14,9 @@ import {
 import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
-import { getProfile } from "../sanity/sanity-utils.ts";
-import Image from "next/image";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [logo, setLogo] = useState("");
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const { logo }: any = await getProfile();
-        setLogo(logo);
-      } catch (error) {
-        console.error("Error fetching profile:", error);
-      }
-    };
-
-    fetchProfile();
-  }, []);
 
   return (
     <Navbar
@@ -45,15 +29,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="lg:-ml-28">
-          {/* <Logo /> */}
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src={logo}
-              alt="Ahmad-Elmesery-logo"
-              width={55}
-              height={55}
-            />
-          </Link>
+          <Logo /> 
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">

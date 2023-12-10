@@ -2,21 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
-import { ProfileContext } from "../context/ProfileContext.tsx";
+import { getProfile } from "../sanity/sanity-utils.ts";
+import { useState } from "react";
 
 export default function Logo() {
-  const profile = useContext(ProfileContext);
-   return (
+  const [logo, setLogo] = useState("");
+
+  const fetchProfile = async () => {
+    const { logo }: any = await getProfile();
+    setLogo(logo);
+    return;
+  };
+  fetchProfile();
+
+  return (
     <>
-      {profile?.logo && (
+      {logo && (
         <Link href="/" className="cursor-pointer">
-          <Image
-            src={profile?.logo}
-            alt="Ahmad-Elmesery-logo"
-            width={55}
-            height={55}
-          />
+          <Image src={logo} alt="Ahmad-Elmesery-logo" width={55} height={55} />
         </Link>
       )}
     </>
