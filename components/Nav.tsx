@@ -11,16 +11,11 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-// import Logo from "./Logo.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
-import Image from "next/image";
-// import logo from "../public/assets/logo.png";
-import { getProfile } from "../sanity/sanity-utils.ts";
 
-export default async function App() {
+export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { logo }: any = await getProfile();
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
@@ -31,17 +26,7 @@ export default async function App() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand className="lg:-ml-28">
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src={logo}
-              alt="Ahmad-Elmesery-logo"
-              width={55}
-              height={55}
-            />
-          </Link>
-          {/* <Logo /> */}
-        </NavbarBrand>
+        <NavbarBrand className="lg:-ml-28"></NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">
         <ThemeSwitcher />
