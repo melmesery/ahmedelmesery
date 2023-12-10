@@ -21,7 +21,7 @@
 }
 /* Credits Section */
 .credits_container {
-  @apply bg-[#F3E3E9]   dark:bg-[#013240];
+  @apply  dark:bg-[#013240];
 }
 .product_credits {
   @apply max-w-[90%] sm:max-w-[80%] mx-auto py-10;
