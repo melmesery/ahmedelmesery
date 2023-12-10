@@ -15,11 +15,12 @@ import {
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 import "../styles/Nav.css";
 import Image from "next/image";
-import logo from "../public/assets/logo.png";
+// import logo from "../public/assets/logo.png";
+import { getProfile } from "../sanity/sanity-utils.ts";
 
-export default function App() {
+export default async function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { logo }: any = await getProfile();
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
