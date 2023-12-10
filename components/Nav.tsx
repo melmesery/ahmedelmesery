@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -29,7 +29,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="lg:-ml-28">
-          <Logo /> 
+          <Logo />
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="sm:hidden" justify="end">
