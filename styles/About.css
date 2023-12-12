@@ -12,9 +12,9 @@
   @apply col-span-2 sm:col-span-1 animate-fade-up animate-delay-1000 animate-ease-in-out;
 }
 /* Profile */
-.profile_image {
+/* .profile_image {
   @apply rounded-full;
-}
+} */
 /* Summary */
 .about_summary {
   @apply col-span-2 sm:col-span-1 animate-fade-up animate-delay-1000 animate-ease-in-out;
